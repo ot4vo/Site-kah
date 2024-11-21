@@ -980,8 +980,5 @@ mask-image: linear-gradient(to top, transparent 40%, #079097 80%) !important;
     position: fixed;
     width: 380px;
     height: 800px;
-    top:50%;
-    left: 50%;
-    transform: translate(-50%, -50%);
   }
 }
