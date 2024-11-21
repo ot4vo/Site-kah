@@ -47,7 +47,7 @@ function iniciarMovimentoAleatorio(imagem) {
   mover();
 }
 
-fetch( '/Site kah/flower/index.html')
+fetch( 'flower/index.html')
   .then(response => response.text())
   .then(data => {
     const parser = new DOMParser();
