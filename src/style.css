@@ -100,12 +100,13 @@
 
 @media screen and (max-width: 700px) {
   #areaDeMovimento {
-    width: 390px;
+    width: 380px;
     height: 800px;
   }
-  body{
-    width: 360px;
-    height: 800px;
+  .imagem-movel {
+    width: 80px; 
+    height: 80px;
+  
   }
     #contador {
       position: absolute;
