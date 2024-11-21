@@ -974,10 +974,11 @@ mask-image: linear-gradient(to top, transparent 40%, #079097 80%) !important;
   animation-play-state: paused !important;
 }
 
-@media screen and (max-width: 700px) {
+@media screen and (max-width: 400px) {
 
   body{
-    width: 360px;
+    position: relative;
+    width: 380px;
     height: 800px;
   }
 }
