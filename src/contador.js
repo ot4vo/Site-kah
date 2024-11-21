@@ -1,4 +1,4 @@
-const dataInicial = new Date(2024, 7, 26, 1, 53, 30);
+const dataInicial = new Date(2024, 6, 26, 1, 53, 30);
 
 function atualizarContador() {
   const agora = new Date();
@@ -15,7 +15,7 @@ function atualizarContador() {
 
 contador.style.color = "white";
 contador.style.fontSize = "2.3em";
-contador.style.fontFamily = "Keep calm";
+contador.style.fontFamily = "'Keep Calm', sans-serif;";
 
 setInterval(atualizarContador, 1000);
 
@@ -46,3 +46,13 @@ function iniciarMovimentoAleatorio(imagem) {
 
   mover();
 }
+
+fetch('../flower/index.html')
+  .then(response => response.text())
+  .then(data => {
+    const parser = new DOMParser();
+    const doc = parser.parseFromString(data, 'text/html');
+    const conteudo = doc.querySelector('body').innerHTML;  // Aqui você pode selecionar partes específicas
+    document.getElementById('flower').innerHTML = conteudo;
+  })
+  .catch(error => console.log('Erro ao carregar o conteúdo:', error));
