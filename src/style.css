@@ -98,41 +98,44 @@
 }
 
 
-@media screen and (max-width: 700px) {
-  #areaDeMovimento {
-    width: 380px;
-    height: 800px;
-  }
+@media screen and (max-width: 400px) {
+  
   .imagem-movel {
     width: 80px; 
     height: 80px;
-  
   }
-    #contador {
-      position: absolute;
-      text-align: center;
-      top:60%; 
-      left: 50%; 
-      transform: translate(-50%, -50%); 
-      padding: 20px;
-      width: 85%; 
-      background-color: rgba(51, 51, 51, 0.6);
-      border-radius: 15px;
-      color: white;
-      font-family: Arial, sans-serif;
-      box-shadow: 1px 5px 8px rgba(0, 0, 0, 0.4);
-      backdrop-filter: blur(10px);
-      border: 5px solid rgba(255, 255, 255, 0.2);
+
+  #flower{
+    transform: translate(0%,-10%)scale(1.2);
+    top: 40%;
+  }
+  
+  #contador {
+    position: absolute;
+    text-align: center;
+    top:50%; 
+    left: 50%; 
+    transform: translate(-50%, -50%); 
+    padding: 20px;
+    width: 100%; 
+    background-color: rgba(51, 51, 51, 0.6);
+    border-radius: 15px;
+    color: white;
+    font-family: 'Keep Calm', sans-serif; 
+    box-shadow: 1px 5px 8px rgba(0, 0, 0, 0.4);
+    backdrop-filter: blur(10px);
+    border: 5px solid rgba(255, 255, 255, 0.2);
     }
 
   .titulo{
     position: absolute;
     text-align: center;
+    width: 200%;
     top:30%;
     left: 50%;
-    transform: translate(-50%, -50%)scale(2);
-    font-size: 2,5em;
-
+    transform: translate(-50%, -50%);
+    font-size: 1.6em;
+    line-height: 1,3;
   }
 
 }
