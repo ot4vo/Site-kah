@@ -86,3 +86,4 @@ function soltarConfetesPor15Segundos() {
     });
   }, intervalo);
 }
+

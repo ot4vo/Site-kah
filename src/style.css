@@ -19,13 +19,13 @@
   height: 100%;
   filter: blur(0.1vmin);
   background-image: 
-  radial-gradient(ellipse at top, transparent 0%, var(--dark-color)), 
-  radial-gradient(ellipse at bottom, var(--dark-color), rgba(117, 0, 108, 0.2)),
-  repeating-linear-gradient(220deg, black 0px, black 19px, transparent 19px, transparent 22px),
-  repeating-linear-gradient(189deg, black 0px, black 19px, transparent 19px, transparent 22px),
-  repeating-linear-gradient(148deg, black 0px, black 19px, transparent 19px, transparent 22px),
-  linear-gradient(90deg, #ffffff, #f0f0f0);
-  z-index: -2 ;
+    radial-gradient(ellipse at top, transparent 0%, var(--dark-color)), 
+    radial-gradient(ellipse at bottom, var(--dark-color), rgba(117, 0, 108, 0.2)),
+    repeating-linear-gradient(220deg, black 0px, black 19px, transparent 19px, transparent 22px),
+    repeating-linear-gradient(189deg, black 0px, black 19px, transparent 19px, transparent 22px),
+    repeating-linear-gradient(148deg, black 0px, black 19px, transparent 19px, transparent 22px),
+    linear-gradient(90deg, #ffffff, #f0f0f0);
+  z-index: -2;
 }
 
 .imagem-movel {
@@ -40,7 +40,7 @@
 #contador {
   text-align: center;
   color: #333;
-  font-family:'Keep Calm', sans-serif;
+  font-family: 'Keep Calm', sans-serif;
   background-color: rgba(51, 51, 51, 0.6);
   padding: 20px;
   border-radius: 30px;
@@ -90,30 +90,28 @@
 
 #flower {
   display: flex;
-  justify-content: center; /* Alinha horizontalmente */
-  align-items: end;     /* Alinha verticalmente */
-  height: 100vh;           /* Ocupa 100% da altura da tela */
-  width: 300000%;             /* Ocupa 100% da largura da tela */
-  overflow: hidden;        /* Evita o conteúdo sair da área visível */
+  justify-content: center;
+  align-items: end;
+  height: 100vh;
+  width: 300000%;
+  overflow: hidden;
 }
 
-
 @media screen and (max-width: 500px) {
-  
   .imagem-movel {
     width: 80px; 
     height: 80px;
   }
 
-  #flower{
-    transform: translate(0%,-10%)scale(1.2);
+  #flower {
+    transform: translate(0%, -10%) scale(1.2);
     top: 40%;
   }
-  
+
   #contador {
     position: absolute;
     text-align: center;
-    top:50%; 
+    top: 50%; 
     left: 50%; 
     transform: translate(-50%, -50%); 
     padding: 20px;
@@ -125,17 +123,16 @@
     box-shadow: 1px 5px 8px rgba(0, 0, 0, 0.4);
     backdrop-filter: blur(10px);
     border: 5px solid rgba(255, 255, 255, 0.2);
-    }
+  }
 
-  .titulo{
+  .titulo {
     position: absolute;
     text-align: center;
     width: 200%;
-    top:30%;
+    top: 30%;
     left: 50%;
     transform: translate(-50%, -50%);
     font-size: 1.6em;
-    line-height: 1,3;
+    line-height: 1.3;
   }
-
 }
