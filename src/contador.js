@@ -1,4 +1,4 @@
-const dataInicial = new Date(2024, 6, 26, 01, 53, 30);
+const dataInicial = new Date(2024, 6, 26, 1, 53, 30);
 let ultimoDia = localStorage.getItem("ultimoDia") ? parseInt(localStorage.getItem("ultimoDia")) : 0; // Recupera o último dia salvo
 
 function atualizarContador() {
