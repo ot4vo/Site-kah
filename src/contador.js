@@ -14,14 +14,7 @@ function atualizarContador() {
   // Atualiza o contador na página
   document.getElementById('contador').innerHTML =
     `${dias} dias ${horas} horas ${minutos} minutos e ${segundos} segundos`;
-
-  // Verifica se o valor de dias mudou
-  if (dias > ultimoDia) {
-    ultimoDia = dias; // Atualiza o último dia registrado
-    localStorage.setItem("ultimoDia", dias); // Salva o último dia no localStorage
-    soltarConfetesPor15Segundos(); // Solta confetes quando o contador avança um dia
   }
-}
 
 contador.style.color = "white";
 contador.style.fontSize = "2.3em";
@@ -68,22 +61,44 @@ fetch('flower/index.html')
   })
   .catch(error => console.log('Erro ao carregar o conteúdo:', error));
 
-// Função para soltar confetes por 15 segundos
-function soltarConfetesPor15Segundos() {
-  const duracao = 15000; // 15 segundos
-  const intervalo = 200; // Confetes a cada 200ms
-  const fim = Date.now() + duracao;
-
-  const intervaloConfetes = setInterval(() => {
-    if (Date.now() >= fim) {
-      clearInterval(intervaloConfetes);
-      return;
-    }
-    confetti({
-      particleCount: 50,
-      spread: 60,
-      origin: { x: Math.random(), y: Math.random() - 0.2 } // Confetes aleatórios
-    });
-  }, intervalo);
+ function randomInRange(min, max) {
+  return Math.random() * (max - min) + min;
 }
+
+function soltarConfetes() {
+  const numConfetes = 1;
+
+var defaults = {
+  spread: 360,
+  ticks: 50,
+  gravity: 0,
+  decay: 0.94,
+  startVelocity: 30,
+  colors: ['FFE400', 'FFBD00', 'E89400', 'FFCA6C', 'FDFFB8'],
+  origin: { 
+    x: event.clientX / window.innerWidth, // Posição X do clique
+    y: event.clientY / window.innerHeight}
+};
+
+function shoot() {
+  confetti({
+    ...defaults,
+    particleCount: 10,
+    scalar: 1.2,
+    shapes: ['star']
+  });
+
+  confetti({
+    ...defaults,
+    particleCount: 10,
+    scalar: 0.75,
+    shapes: ['circle'],
+  });
+}
+
+setTimeout(shoot, 0);
+setTimeout(shoot, 100);
+setTimeout(shoot, 200);}
+
+document.body.addEventListener('click', soltarConfetes);
 
